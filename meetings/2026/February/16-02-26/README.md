@@ -43,16 +43,16 @@ Link any relevant pinned Issues or Discussions or files in `announcements/`.
 
 ## Presentations and discussion
 
-### Talk 1: Title (Presenter)
+### Talk 1: Intro (Aurelio)
 - Slides: `./slides/FILENAME`
-- Summary: 5 to 10 lines
+- Summary: Recap and introduce Richard, and social events committee
 - Key feedback:
   - Point
   - Point
 - Follow-ups:
   - Item
 
-### Talk 2: Title (Liam)
+### Talk 2: 2AFC paradigm adapation to social stimuli. (Liam)
 - Slides: `./slides/Lab Meeting 16-2-26 exp discussion.pptx`
 - Summary: 2AFC task adaptation. Previous task designed to unpick duration senstive neural cells by way of factor and PCA analysis on 5 levels of durations, from short to longer. Adapated to assess if social meaning (gaze) modulates the results found in the previous experiment. Dicscussed changes made to use social stimuli.
 - Key feedback:
