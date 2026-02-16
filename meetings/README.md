@@ -36,7 +36,7 @@ Minimum expected contents:
 
 Recommended (optional) additions if useful:
 - `files/` for supporting materials that are not slides (figures, PDFs, small datasets, links captured as markdown, etc.)
-- `decisions.md` if you want a separate running list of decisions for that meeting (otherwise keep decisions in the meeting `README.md`)
+- `decisions.md` if we want a separate running list of decisions for that meeting (otherwise keep decisions in the meeting `README.md`)
 
 ## Creating a new meeting folder
 
