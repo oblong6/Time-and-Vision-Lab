@@ -1,0 +1,23 @@
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Office temporary files
+~$*.docx
+~$*.pptx
+~$*.xlsx
+
+# LaTeX build artefacts (if any)
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Python cache (if any)
+__pycache__/
+*.pyc
