@@ -252,3 +252,59 @@ if __name__ == "__main__":
 * `2027/February/15-02-27/` (2027-02-15, Mon 12:00-13:00)
 
 ```
+
+Example output
+```
+"C:\Users\liam_\PycharmProjects\PhD Experiment Building 2026\.venv\Scripts\python.exe" "C:\Users\liam_\PycharmProjects\PhD Experiment Building 2026\meeting indexing.py" 
+# Upcoming meetings (next 12 months)
+
+This index is generated from the standard alternating slot schedule (Mon 12:00-13:00, Thu 14:00-15:00).
+This output is computed for the next 12 months from the machine's current date.
+
+## 2026
+
+### February
+- `2026/February/16-02-26/` (2026-02-16, Mon 12:00-13:00)
+- `2026/February/26-02-26/` (2026-02-26, Thu 14:00-15:00)
+### March
+- `2026/March/16-03-26/` (2026-03-16, Mon 12:00-13:00)
+- `2026/March/26-03-26/` (2026-03-26, Thu 14:00-15:00)
+### April
+- `2026/April/13-04-26/` (2026-04-13, Mon 12:00-13:00)
+- `2026/April/23-04-26/` (2026-04-23, Thu 14:00-15:00)
+### May
+- `2026/May/11-05-26/` (2026-05-11, Mon 12:00-13:00)
+- `2026/May/21-05-26/` (2026-05-21, Thu 14:00-15:00)
+### June
+- `2026/June/08-06-26/` (2026-06-08, Mon 12:00-13:00)
+- `2026/June/18-06-26/` (2026-06-18, Thu 14:00-15:00)
+### July
+- `2026/July/06-07-26/` (2026-07-06, Mon 12:00-13:00)
+- `2026/July/16-07-26/` (2026-07-16, Thu 14:00-15:00)
+### August
+- `2026/August/03-08-26/` (2026-08-03, Mon 12:00-13:00)
+- `2026/August/13-08-26/` (2026-08-13, Thu 14:00-15:00)
+- `2026/August/31-08-26/` (2026-08-31, Mon 12:00-13:00)
+### September
+- `2026/September/10-09-26/` (2026-09-10, Thu 14:00-15:00)
+- `2026/September/28-09-26/` (2026-09-28, Mon 12:00-13:00)
+### October
+- `2026/October/08-10-26/` (2026-10-08, Thu 14:00-15:00)
+- `2026/October/26-10-26/` (2026-10-26, Mon 12:00-13:00)
+### November
+- `2026/November/05-11-26/` (2026-11-05, Thu 14:00-15:00)
+- `2026/November/23-11-26/` (2026-11-23, Mon 12:00-13:00)
+### December
+- `2026/December/03-12-26/` (2026-12-03, Thu 14:00-15:00)
+- `2026/December/21-12-26/` (2026-12-21, Mon 12:00-13:00)
+- `2026/December/31-12-26/` (2026-12-31, Thu 14:00-15:00)
+## 2027
+
+### January
+- `2027/January/18-01-27/` (2027-01-18, Mon 12:00-13:00)
+- `2027/January/28-01-27/` (2027-01-28, Thu 14:00-15:00)
+### February
+- `2027/February/15-02-27/` (2027-02-15, Mon 12:00-13:00)
+
+Process finished with exit code 0
+```
