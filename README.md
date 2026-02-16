@@ -3,7 +3,7 @@
 A shared community across the Bruno and Souto labs in the School of Psychology and Vision Sciences (University of Leicester), focused on time perception, vision, attention, and eye movements. The aim is to foster collaboration, mutual support, and clear communication of methods and ideas across projects.
 
 <p align="center">
-  <img src="../assets/TAVLG.png" width="600">
+  <img src="./assets/TAVLG.png" width="600">
 </p>
 
 
