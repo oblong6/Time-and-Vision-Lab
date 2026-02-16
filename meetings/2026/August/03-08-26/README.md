@@ -2,7 +2,7 @@
 
 ## Meeting details
 
-- Date: 2026-08-03 (Monday 03 August 2026)
+- Date: 03/08/2026 (Monday 03 August 2026)
 - Time: 12:00 to 13:00 (UK)
 - Slot: Monday slot
 - Location: TBD (typically GDC)

@@ -2,7 +2,7 @@
 
 ## Meeting details
 
-- Date: 2026-10-26 (Monday 26 October 2026)
+- Date: 26/10/2026 (Monday 26 October 2026)
 - Time: 12:00 to 13:00 (UK)
 - Slot: Monday slot
 - Location: TBD (typically GDC)

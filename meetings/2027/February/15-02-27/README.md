@@ -2,7 +2,7 @@
 
 ## Meeting details
 
-- Date: 2027-02-15 (Monday 15 February 2027)
+- Date: 15/02/2027 (Monday 15 February 2027)
 - Time: 12:00 to 13:00 (UK)
 - Slot: Monday slot
 - Location: TBD (typically GDC)

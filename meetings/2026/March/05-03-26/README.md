@@ -2,9 +2,9 @@
 
 ## Meeting details
 
-- Date: 18/01/2027 (Monday 18 January 2027)
-- Time: 12:00 to 13:00 (UK)
-- Slot: Monday slot
+- Date: 05/03/2026 (Thursday 05 March 2026)
+- Time: 14:00 to 15:00 (UK)
+- Slot: Thursday slot
 - Location: TBD (typically GDC)
 - Chair: TBD
 - Note-taker: TBD
