@@ -254,7 +254,7 @@ if __name__ == "__main__":
 ```
 
 Example output
-```
+
 "C:\Users\liam_\PycharmProjects\PhD Experiment Building 2026\.venv\Scripts\python.exe" "C:\Users\liam_\PycharmProjects\PhD Experiment Building 2026\meeting indexing.py" 
 # Upcoming meetings (next 12 months)
 
