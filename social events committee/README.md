@@ -1,5 +1,8 @@
 # Social events committee
 
+
+![Social Events Committee banner](https://liamjordan.co.uk/wp-content/uploads/2026/02/SEC.png)
+
 The Time and Vision Lab Group social events committee exists to organise informal, optional social meet-ups outside of work. The aim is simple: help people across the Bruno and Souto labs get to know each other, keep the group feeling cohesive, and make lab life more enjoyable.
 
 ## Chairs
