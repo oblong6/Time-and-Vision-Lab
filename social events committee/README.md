@@ -31,6 +31,13 @@ Each social event will have its own folder in this directory. That folder will a
 
 If photos are included, only add photos where everyone in the image is comfortable with it and it is appropriate for an internal lab repository.
 
+## Templates
+
+Use the templates in:
+- `./_TEMPLATE_EVENT/` for creating a new event folder
+- `./_TEMPLATE_POLL/` for running a poll (Google Forms link)
+- `./_TEMPLATE_SUGGESTION/` for capturing a suggestion before turning it into a poll or event
+
 ## What happens next
 
 - Polls will be circulated to decide preferred formats, venues, and timing.
