@@ -33,10 +33,10 @@ If photos are included, only add photos where everyone in the image is comfortab
 
 ## Templates
 
-Use the templates in:
-- `./_TEMPLATE_EVENT/` for creating a new event folder
-- `./_TEMPLATE_POLL/` for running a poll (Google Forms link)
-- `./_TEMPLATE_SUGGESTION/` for capturing a suggestion before turning it into a poll or event
+Use the templates:
+- `./EVENT.md/` for creating a new event folder
+- `./POLL.md/` for running a poll (Google Forms link)
+- `./SUGGESTION.md/` for capturing a suggestion before turning it into a poll or event
 
 ## What happens next
 
