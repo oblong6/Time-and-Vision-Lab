@@ -9,9 +9,11 @@ This is the central repository for:
 - Slides and other presentation materials
 - Shared files that support discussion (figures, papers, links, small datasets where appropriate)
 
-Everything is organised by meeting, with a subfolder per meeting. Important notices (for example schedule changes, room changes, urgent updates) should be either:
+Everything is organised by meeting, with a subfolder created for each meeting. Important notices (for example schedule changes, room changes, urgent updates) should be either:
 - pinned as a GitHub Issue or Discussion, and linked from the relevant meeting folder, or
-- placed in `announcements/` and linked from the relevant meeting folder and the indexes.
+- placed in `announcements/` and linked from the relevant meeting folder and the indexes
+
+Important items should be easy to find. If something matters beyond a single meeting, ensure it is indexed in `announcements/README.md` and, where appropriate, linked from the meeting record.
 
 ## Research themes
 
@@ -61,9 +63,25 @@ If you have something you want feedback on, you can present at any meeting. Send
 
 ## Where to find things
 
+### Meeting records
+Meeting folders are stored as:
+
+`meetings/<YEAR>/<Month>/<DD-MM-YY>/`
+
+Example:
+- `meetings/2026/February/16-02-26/`
+
+Each meeting folder should typically include:
+- `README.md` (meeting record and links)
+- `minutes.md`
+- `action-items.md`
+- `slides/`
+- optional: `files/`
+
+### Indexes and templates
 - Meeting index: `meetings/README.md`
 - Meeting template: `meetings/_TEMPLATE/README.md`
-- Notices and pinned items: `announcements/README.md` (plus pinned Issues or Discussions where used)
+- Notices index: `announcements/README.md` (plus pinned Issues or Discussions where used)
 
 ## People
 
