@@ -15,25 +15,6 @@ Important: the alternating Monday/Thursday pattern needs a phase anchor (otherwi
 
 ```python
 #!/usr/bin/env python3
-"""
-Compute the next 12 months of Time and Vision Lab Group meeting dates.
-
-Schedule:
-- Alternating slots:
-  - Monday 12:00-13:00
-  - Thursday 14:00-15:00
-- The combined sequence is:
-  - Monday -> Thursday (+10 days)
-  - Thursday -> Monday (+18 days)
-
-This script generates an index for the next 12 months from the machine's current
-date (system clock), and prints markdown to stdout.
-
-Note on phase:
-The alternation requires a known anchor meeting date for the Monday slot.
-Update ANCHOR_DATE if the schedule phase changes.
-"""
-
 from __future__ import annotations
 
 import sys
@@ -47,7 +28,6 @@ class Slot:
     label: str
     start_time: str
     end_time: str
-    weekday: int  # Monday=0 ... Sunday=6
 
 
 MON_SLOT = Slot(
@@ -55,7 +35,6 @@ MON_SLOT = Slot(
     label="Mon 12:00-13:00",
     start_time="12:00",
     end_time="13:00",
-    weekday=0,
 )
 
 THU_SLOT = Slot(
@@ -63,123 +42,95 @@ THU_SLOT = Slot(
     label="Thu 14:00-15:00",
     start_time="14:00",
     end_time="15:00",
-    weekday=3,
 )
 
-# Phase anchor: a known Monday-slot meeting date.
-# Update this if the schedule phase changes.
-ANCHOR_DATE = date(2026, 2, 16)
-ANCHOR_SLOT = MON_SLOT
+MON_ANCHOR_DATE = date(2026, 2, 16)
+THU_ANCHOR_DATE = date(2026, 3, 5)
+
+PERIOD_DAYS = 28
 
 
 def add_one_year_safe(d: date) -> date:
-    """
-    Return the same calendar date next year where possible.
-    If the date does not exist next year (29 Feb), fall back to 28 Feb.
-    """
     try:
         return date(d.year + 1, d.month, d.day)
     except ValueError:
-        # Handles 29 Feb
         if d.month == 2 and d.day == 29:
             return date(d.year + 1, 2, 28)
         raise
 
 
-def next_meeting_on_or_after(start: date) -> tuple[date, Slot]:
-    """
-    Given a start date, return the next meeting date on or after it,
-    following the anchored alternating schedule.
-    """
-    dt = ANCHOR_DATE
-    slot = ANCHOR_SLOT
-
-    # Step forward until we reach start
-    while dt < start:
-        if slot.key == "MON":
-            dt = dt + timedelta(days=10)  # Mon -> Thu
-            slot = THU_SLOT
-        else:
-            dt = dt + timedelta(days=18)  # Thu -> Mon
-            slot = MON_SLOT
-
-    return dt, slot
+def next_occurrence_on_or_after(start: date, anchor: date) -> date:
+    if start <= anchor:
+        return anchor
+    delta_days = (start - anchor).days
+    steps = (delta_days + (PERIOD_DAYS - 1)) // PERIOD_DAYS
+    return anchor + timedelta(days=steps * PERIOD_DAYS)
 
 
-def iter_meetings(start: date, end_exclusive: date):
-    """
-    Yield (date, slot) pairs from the schedule, starting at the first meeting
-    on or after 'start', stopping before 'end_exclusive'.
-    """
-    dt, slot = next_meeting_on_or_after(start)
-
+def iter_slot(start: date, end_exclusive: date, anchor: date, slot: Slot):
+    dt = next_occurrence_on_or_after(start, anchor)
     while dt < end_exclusive:
         yield dt, slot
-        if slot.key == "MON":
-            dt = dt + timedelta(days=10)
-            slot = THU_SLOT
-        else:
-            dt = dt + timedelta(days=18)
-            slot = MON_SLOT
+        dt = dt + timedelta(days=PERIOD_DAYS)
 
 
 def folder_path_for_meeting(d: date) -> str:
-    """
-    Path fragment using the repository convention:
-    YEAR/Month/DD-MM-YY/
-    """
     year = d.strftime("%Y")
     month = d.strftime("%B")
     ddmmyy = d.strftime("%d-%m-%y")
     return f"{year}/{month}/{ddmmyy}/"
 
 
+def uk_date(d: date) -> str:
+    return d.strftime("%d/%m/%Y")
+
+
 def to_markdown_index(start: date) -> str:
     end_exclusive = add_one_year_safe(start) + timedelta(days=1)
 
+    meetings = []
+    meetings.extend(list(iter_slot(start, end_exclusive, MON_ANCHOR_DATE, MON_SLOT)))
+    meetings.extend(list(iter_slot(start, end_exclusive, THU_ANCHOR_DATE, THU_SLOT)))
+    meetings.sort(key=lambda x: (x[0], x[1].key))
+
     lines: list[str] = []
     lines.append("# Upcoming meetings (next 12 months)\n\n")
-    lines.append(
-        "This index is generated from the standard alternating slot schedule "
-        "(Mon 12:00-13:00, Thu 14:00-15:00).\n"
-    )
-    lines.append(
-        "This output is computed for the next 12 months from the machine's current date.\n\n"
-    )
+    lines.append("This index is generated from the standard schedule:\n")
+    lines.append("- Monday 12:00 to 13:00 (every 4 weeks)\n")
+    lines.append("- Thursday 14:00 to 15:00 (every 4 weeks)\n\n")
+    lines.append("This output is computed for the next 12 months from the machine's current date.\n\n")
 
     current_year = None
     current_month = None
 
-    for d, slot in iter_meetings(start=start, end_exclusive=end_exclusive):
+    for d, slot in meetings:
         year = d.strftime("%Y")
         month = d.strftime("%B")
+
         if year != current_year:
             lines.append(f"## {year}\n\n")
             current_year = year
             current_month = None
+
         if month != current_month:
             lines.append(f"### {month}\n")
             current_month = month
 
         rel = folder_path_for_meeting(d)
-        lines.append(f"- `{rel}` ({d.isoformat()}, {slot.label})\n")
-
-        # blank line after each month block (when month changes) is handled naturally
-        # by the next "###" or "##" header. Add a newline between months for readability.
-        # (We insert it when the next month/year header is emitted.)
+        lines.append(f"- `{rel}` ({uk_date(d)}, {slot.label})\n")
 
     return "".join(lines)
 
 
 def main() -> int:
     today = date.today()
-    md = to_markdown_index(start=today)
-    sys.stdout.write(md)
+    sys.stdout.write(to_markdown_index(today))
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
+
 ````
 
 ## 2026
