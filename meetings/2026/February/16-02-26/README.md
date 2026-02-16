@@ -44,7 +44,7 @@ Link any relevant pinned Issues or Discussions or files in `announcements/`.
 ## Presentations and discussion
 
 ### Talk 1: Intro (Aurelio)
-- Slides: `./slides/FILENAME`
+- Slides: `./slides/Lab_Meeting_16_Feb_2026.pptx`
 - Summary: Recap and introduce Richard, and social events committee
 - Key feedback:
   - Point
