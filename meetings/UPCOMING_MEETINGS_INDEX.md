@@ -1,4 +1,4 @@
-````markdown
+
 # Upcoming meetings (next 12 months)
 
 This index is generated from the standard alternating slot schedule:
@@ -251,5 +251,4 @@ if __name__ == "__main__":
 
 * `2027/February/15-02-27/` (2027-02-15, Mon 12:00-13:00)
 
-```
 ```
