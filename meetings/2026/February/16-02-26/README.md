@@ -54,7 +54,7 @@ Link any relevant pinned Issues or Discussions or files in `announcements/`.
 
 ### Talk 2: 2AFC paradigm adapation to social stimuli. (Liam)
 - Slides: `./slides/Lab Meeting 16-2-26 exp discussion.pptx`
-- Summary: 2AFC task adaptation. Previous task designed to unpick duration senstive neural cells by way of factor and PCA analysis on 5 levels of durations, from short to longer. Adapated to assess if social meaning (gaze) modulates the results found in the previous experiment. Dicscussed changes made to use social stimuli.
+- Summary: 2AFC task adaptation. Previous task designed to unpick duration senstive neural channels by way of factor and PCA analysis on 5 levels of durations, from short to longer. Adapated to assess if social meaning (gaze) modulates the results found in the previous experiment. Dicscussed changes made to use social stimuli.
 - Key feedback:
 - Follow-ups:
 
