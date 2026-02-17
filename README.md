@@ -47,7 +47,7 @@ We meet fortnightly, alternating between:
 - Mondays 12:00 to 13:00
 - Thursdays 14:00 to 15:00
 
-Rooms are typically in the George Davies Centre (GDC) and may vary by date.
+Rooms are typically in the George Davies Centre (GDC 4.29) and may vary by date.
 
 ### Format
 Informal, supportive, practical. Slides are encouraged. Updates can be short, especially when the goal is feedback on a specific method or decision.
