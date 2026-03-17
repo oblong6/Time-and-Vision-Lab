@@ -62,7 +62,7 @@ Link any relevant pinned Issues or Discussions or files in `announcements/`.
 ## Presentations and discussion
 
 ### Talk 1: Direct gaze bias, metacognitive awareness and autism (Princilla Agyemang)
-- Slides: `./slides/TBD`
+- Slides: `./slides/Lab_Meeting_16_Mar_2026.pptx`
 - Summary:
   - Princilla outlined a dissertation project examining direct gaze bias under uncertainty, and whether this bias reflects perceptual or decisional processes.
   - The project is grounded in a Bayesian account of perception, with the proposal that prior expectations exert a stronger influence under noisy or uncertain viewing conditions.
@@ -94,7 +94,7 @@ See `action-items.md` (and link Issues here if actions are tracked as Issues).
 
 - Minutes: `./minutes.md`
 - Action items: `./action-items.md`
-- Slides: `./slides/`
+- Slides: `./slides/Lab_Meeting_16_Mar_2026.pptx`
 - Supporting files (if used): `./files/`
 
 ## Next meeting
