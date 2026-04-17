@@ -75,7 +75,7 @@ Liam presented a project investigating whether time perception operates via a un
 
 * Minutes: `./minutes.md`
 * Action items: `./action-items.md`
-* Slides: `./slides/`
+* Slides: `./slides/2afc_exp1.pptx`
 * Supporting files (if used): `./files/`
 
 ## Next meeting
